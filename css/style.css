@@ -255,7 +255,7 @@ nav ul li a{
 @media (max-width: 975px) {
   .first-section {
     flex-direction: column;   
-    min-height: 120vh;        
+    min-height: 100vh;        
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -263,7 +263,7 @@ nav ul li a{
 
   .left img {
     max-width: 300px;
-    margin-top: 110px;
+    margin-top: 30px;
   }
 
   .right {
