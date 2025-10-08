@@ -106,7 +106,6 @@ nav ul li a{
     right: 1px;           /* هنا المفتاح عشان يكون على اليمين */
     top: 50%;
     transform: translateY(-50%);
-    height: 90px;
   }
 
   /* أيقونة الهامبرجر أقصى اليسار */
@@ -296,7 +295,6 @@ nav ul li a{
   .left img {
     margin-left: 30px;
     max-width: 300px;
-    margin-top: 30px;
   }
 
   .right {
