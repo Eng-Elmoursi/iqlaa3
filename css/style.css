@@ -88,6 +88,42 @@ nav ul li a{
   }
 }
 
+@media (max-width: 767px) {
+  /* إخفاء زرار تواصل معنا */
+  .contact-us {
+    display: none;
+  }
+
+  /* ضبط توزيع العناصر داخل الهيدر */
+  header {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* اللوجو أقصى اليمين */
+  .logo {
+    position: absolute;
+    right: 1px;           /* هنا المفتاح عشان يكون على اليمين */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90px;
+  }
+
+  /* أيقونة الهامبرجر أقصى اليسار */
+  .hamburger {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+  }
+
+  /* إخفاء القائمة العادية */
+  nav {
+    display: none;
+  }
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -254,27 +290,23 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  .left img{
-    margin-left:30px ;
-  }
-
-  .right{
-    margin-left: 42px;
+    padding: 0; /* شيل البادينج في الشاشات الصغيرة */
   }
 
   .left img {
+    margin-left: 30px;
     max-width: 300px;
     margin-top: 30px;
   }
 
   .right {
+    margin-left: 42px;
     max-width: 100%;
     text-align: center;       
     align-items: center;
   }
 }
+
 
 .features {
   display: flex;
