@@ -297,6 +297,10 @@ nav ul li a{
     max-width: 300px;
   }
 
+  .left{
+    flex: 1 1 330px;
+  }
+
   .right {
     margin-left: 42px;
     max-width: 100%;
