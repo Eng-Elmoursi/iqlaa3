@@ -235,7 +235,7 @@ nav ul li a{
   direction: rtl;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   flex-direction: column;
   text-align: right;
   margin-right: 42px;
@@ -298,7 +298,7 @@ nav ul li a{
   }
 
   .left{
-    flex: 1 1 250px;
+    flex: 1 1 100px;
   }
 
   .right {
