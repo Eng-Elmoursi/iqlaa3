@@ -298,7 +298,7 @@ nav ul li a{
   }
 
   .left{
-    flex: 1 1 100px;
+    flex: 1 1 300px;
   }
 
   .right {
@@ -967,3 +967,4 @@ nav ul li a{
     margin-top: 0;
   }
 }
+
