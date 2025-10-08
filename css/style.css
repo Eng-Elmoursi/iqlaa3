@@ -217,7 +217,7 @@ nav ul li a{
   justify-content: center;
   align-items: center;
   animation: floatUpDown 2s ease-in-out infinite;
-  flex: 1 1 350px;
+  flex: 1 1 320px;
   max-width: 500px;
 }
 
