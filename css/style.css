@@ -208,7 +208,6 @@ nav ul li a{
   background-image: url('../images/1-1.png');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -217,7 +216,7 @@ nav ul li a{
   justify-content: center;
   align-items: center;
   animation: floatUpDown 2s ease-in-out infinite;
-  flex: 1 1;
+  flex: 1 1 340px;
   max-width: 500px;
 }
 
