@@ -217,7 +217,7 @@ nav ul li a{
   justify-content: center;
   align-items: center;
   animation: floatUpDown 2s ease-in-out infinite;
-  flex: 1 1 375px;
+  flex: 1 1 350px;
   max-width: 500px;
 }
 
@@ -751,7 +751,7 @@ nav ul li a{
   .section-4-img {
     width: 90%;
     max-width: 550px;
-    margin-left:120px;
+    margin-left:110px;
   }
 }
 
