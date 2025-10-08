@@ -235,7 +235,7 @@ nav ul li a{
   direction: rtl;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-direction: column;
   text-align: right;
   margin-right: 42px;
@@ -298,7 +298,7 @@ nav ul li a{
   }
 
   .left{
-    flex: 1 1 300px;
+    flex: 1 1 385px;
   }
 
   .right {
@@ -306,6 +306,7 @@ nav ul li a{
     max-width: 100%;
     text-align: center;       
     align-items: center;
+    gap: 20px;
   }
 }
 
@@ -967,4 +968,3 @@ nav ul li a{
     margin-top: 0;
   }
 }
-
