@@ -249,6 +249,14 @@ nav ul li a{
   animation: fadeUp 2s ease-out;
 }
 
+.right h1{
+  font-size: 50px;
+}
+
+.right p{
+  font-size: 18px;
+}
+
 /* ===============================
    Hidden Span (for SEO or accessibility)
 =================================*/
@@ -337,6 +345,7 @@ nav ul li a{
     align-items: center;
     justify-content:normal;
     margin-left: 42px;
+    padding-top: 60px;
   }
 }
 
