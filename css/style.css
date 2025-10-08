@@ -199,47 +199,59 @@ nav ul li a{
   text-align: center;
 }
 
+/* ===============================
+   First Section
+=================================*/
 .first-section {
   width: 100%;
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url('../images/1-1.png');
+  background-image: url("../images/1-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
 
+/* ===============================
+   Left Side (Image)
+=================================*/
 .left {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: floatUpDown 2s ease-in-out infinite;
   flex: 1 1;
   max-width: 500px;
+  animation: floatUpDown 2s ease-in-out infinite;
 }
 
 .left img {
-  height: auto;
   max-width: 450px;
-  margin-right:30px ;
+  height: auto;
+  margin-right: 30px;
 }
 
+/* ===============================
+   Right Side (Text)
+=================================*/
 .right {
   flex: 1 1 400px;
   max-width: 550px;
   color: var(--yellow);
-  animation: fadeUp 2s ease-out;
   direction: rtl;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 25px;
-  flex-direction: column;
   text-align: right;
   margin-right: 42px;
+  animation: fadeUp 2s ease-out;
 }
 
+/* ===============================
+   Hidden Span (for SEO or accessibility)
+=================================*/
 .h1-span {
   position: absolute !important;
   width: 1px;
@@ -252,22 +264,38 @@ nav ul li a{
   border: 0;
 }
 
+/* ===============================
+   Animations
+=================================*/
 @keyframes floatUpDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes fadeUp {
-  from { opacity:0; transform: translateY(30px); }
-  to { opacity:1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ===============================
+   Button (Services)
+=================================*/
 .services {
   color: var(--black);
+  background-color: var(--yellow);
   border: 3px solid var(--yellow);
   padding: 12px 25px;
   border-radius: 30px;
-  background-color: var(--yellow);
   position: relative;
   width: fit-content;
   font-size: 16px;
@@ -281,34 +309,37 @@ nav ul li a{
   margin-right: 5px;
 }
 
+/* ===============================
+   Responsive (Mobile)
+=================================*/
 @media (max-width: 975px) {
   .first-section {
-    flex-direction: column;   
-    min-height: 100vh;        
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 100vh;
     padding-bottom: 30px;
   }
 
-  .left img {
-    margin-left: 30px;
-    max-width: 280px;
-  }
-
-  .left{
+  .left {
     margin-top: 30px;
   }
 
+  .left img {
+    max-width: 280px;
+    margin-left: 30px;
+  }
+
   .right {
-    margin-left: 42px;
     max-width: 100%;
-    text-align: center;       
+    text-align: center;
     align-items: center;
-    gap: 20px;
-    padding-top: 75px;
+    justify-content:normal;
+    margin-left: 42px;
   }
 }
+
 
 
 .features {
