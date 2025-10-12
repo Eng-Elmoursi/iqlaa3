@@ -303,7 +303,7 @@ nav ul li a{
   color: var(--black);
   background-color: var(--yellow);
   border: 3px solid var(--yellow);
-  padding: 12px 25px;
+  padding: 12px 2px;
   border-radius: 30px;
   position: relative;
   width: fit-content;
@@ -336,7 +336,7 @@ nav ul li a{
   }
 
   .left img {
-    max-width: 350px;
+    max-width: 80%;
     margin-right: 20px;
   }
 
@@ -355,7 +355,7 @@ nav ul li a{
 
   .services {
     font-size: 15px;
-    padding: 10px 22px;
+    padding: 10px 2px;
   }
 }
 
@@ -381,7 +381,7 @@ nav ul li a{
   }
 
   .left img {
-    max-width: 280px;
+    max-width: 80%;
     margin-left: 30px;
   }
 
@@ -413,7 +413,7 @@ nav ul li a{
 =================================*/
 .feature-box {
   position: relative;
-  width: 350px;
+  width: 330px;
   padding: 80px 25px 40px;
   background: var(--yellow);
   border-radius: 25px;
@@ -679,9 +679,12 @@ nav ul li a{
   justify-content: space-between;
   flex-wrap: nowrap;
   z-index: 1;
-  max-width: 1130px;
-  width: 100%;
+  width: 1130px;         /* العرض المطلوب */
+  max-width: 100%;       /* عشان ما يخرجش عن الشاشة الصغيرة */
+  margin: 0 auto;        /* يخلي الديف في نص الصفحة */
+  padding: 0 20px;
 }
+
 
 .section-4-right {
   flex: 1;
@@ -713,9 +716,9 @@ nav ul li a{
 
 .section-4-img {
   max-width: 100%;
-  width: 600px;
+  width: 450px;
   animation: float-4 2s ease-in-out infinite;
-  margin: 0;
+  margin-right: 80px;
 }
 
 @keyframes float-4 {
@@ -846,8 +849,303 @@ nav ul li a{
   .section-4-img {
     width: 90%;
     max-width: 550px;
+    margin-left: 80px;
+
   }
 }
+
+@media (max-width: 476px) {
+  .section-4-tab-btn{
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 390px) {
+  .section-4-tab-btn{
+    padding: 2px 10px;
+  }
+  
+}
+
+
+
+
+/* ===============================
+   Fifth Section
+=================================*/
+.fifth-section {
+  width: 1130px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.section-header .subtitle {
+  color: var(--yellow);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.section-header .title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.view-all-btn {
+  color: var(--black);
+  background-color: var(--yellow);
+  border: 3px solid var(--yellow);
+  padding: 12px 45px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.view-all-btn:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+/* ===============================
+   Cards Container
+=================================*/
+.cards-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 455px;
+  overflow: hidden;
+}
+
+/* ===============================
+   Individual Card
+=================================*/
+.card {
+  flex: 1;
+  height: 100%;
+  margin: 0 5px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: none; /* الكارد تفتح فورًا */
+}
+
+/* الخلفيات لكل كارد */
+#card1 { background-image: url("../images/5-1.png"); }
+#card2 { background-image: url("../images/5-2.png"); }
+#card3 { background-image: url("../images/5-3.png"); }
+#card4 { background-image: url("../images/5-4.png"); }
+#card5 { background-image: url("../images/5-5.png"); }
+
+/* overlay للكارد */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--black);
+  transition: background 0.3s;
+}
+
+/* overlay يختفي للكارد النشط */
+.card.active::after {
+  background: rgba(6, 9, 14, 0);
+}
+
+/* الكارد المفتوح يتوسع */
+.card.active {
+  flex: 3;
+  transition: none;
+}
+
+/* ===============================
+   Card Header
+=================================*/
+.card-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(270deg);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* نخفي الهيدر للكارد النشط */
+.card.active .card-header {
+  display: none;
+}
+
+/* ===============================
+   Card Content
+=================================*/
+.card-content {
+  display: none;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+/* يظهر المحتوى للكارد النشط */
+.card.active .card-content {
+  display: block;
+}
+
+
+/* ===============================
+   Responsive Styles
+=================================*/
+
+/* ===============================
+   Responsive Design
+=================================*/
+
+/* الشاشات أقل من 1200px */
+@media (max-width: 1200px) {
+  .fifth-section {
+    width: 95%;
+    margin: 80px auto;
+  }
+
+  .cards-container {
+    height: 400px;
+  }
+
+  .section-header .title {
+    font-size: 32px;
+  }
+}
+
+/* الشاشات أقل من 992px (تابلت) */
+@media (max-width: 992px) and (min-width: 768px) {
+  .fifth-section {
+    width: 95%;
+    margin: 80px auto;
+  }
+
+  .section-header .title {
+    font-size: 30px;
+  }
+
+  .section-header .subtitle {
+    font-size: 16px;
+  }
+
+  .view-all-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+
+  .cards-container {
+    height: 350px;
+    gap: 10px;
+  }
+
+  .card {
+    margin: 0 4px;
+    height: 100%;
+  }
+
+  .card-header {
+    font-size: 14px;
+  }
+
+  .card-content {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* Section Header */
+  .section-header .title {
+    font-size: 28px;
+  }
+
+  .section-header .subtitle {
+    font-size: 16px;
+  }
+
+  .view-all-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  /* Cards Container */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  /* Individual Card */
+  .card,
+  .card.active {      /* إزالة تأثير الكلاس active */
+    flex: none !important;
+    width: 100%;
+    height: 500px;    /* ارتفاع ثابت لكل الكروت */
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* Overlay لكل الكروت */
+  .card::after,
+  .card.active::after {
+    background: rgba(0, 0, 0, 0.3); /* نفس اللون لكل الكروت */
+  }
+
+  /* Header داخل الكارد */
+  .card-header {
+    display: none !important; /* نخفي الهيدر تمامًا */
+  }
+
+  /* Content داخل الكارد */
+  .card-content {
+    display: block !important; /* كل المحتوى ظاهر */
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -933,6 +1231,7 @@ nav ul li a{
 
 .footer-column:first-child .footer-social-icons {
   margin-top: 20px;
+  display: flex;
 }
 
 .footer-heading {

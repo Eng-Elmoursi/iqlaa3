@@ -108,3 +108,24 @@ document.querySelectorAll('.section-4-left, .section-4-right').forEach(el => {
   observer_4.observe(el);
 });
 
+ 
+
+
+const cards = document.querySelectorAll('.card');
+const container = document.querySelector('.cards-container');
+
+// لما تعمل هوفر على كارد
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    cards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
+});
+
+// لما تسيب الماوس من السكشن كله، يرجع أول كارد (اليمين) مفتوح
+container.addEventListener('mouseleave', () => {
+  cards.forEach(c => c.classList.remove('active'));
+  document.getElementById('card1').classList.add('active');
+});
+
+
