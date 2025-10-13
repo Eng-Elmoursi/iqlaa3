@@ -222,7 +222,7 @@ nav ul li a{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1;
+  /* flex: 1 1; */
   max-width: 500px;
   animation: floatUpDown 2s ease-in-out infinite;
 }
@@ -328,12 +328,12 @@ nav ul li a{
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    min-height: 90vh;
+    min-height: 70vh; /* قللنا الارتفاع من 90vh لـ 70vh */
     background-position: center;
   }
 
   .left{
-    padding-top: 30px;
+    padding-top: 20px; /* قللنا المسافة فوق */
   }
 
   .left img {
@@ -369,8 +369,8 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
-    padding-bottom: 30px;
+    min-height: 80vh; /* قللنا من 100vh لـ 80vh */
+    padding-bottom: 20px; /* قللنا البادينج */
   }
 
   .first-section .right h1 {
@@ -378,22 +378,24 @@ nav ul li a{
   }
 
   .left {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .left img {
     max-width: 80%;
-    margin-left: 30px;
+    margin-left: 0px;
   }
 
   .right {
     max-width: 100%;
     text-align: center;
     align-items: center;
-    justify-content:normal;
-    margin-left: 42px;
+    justify-content: normal;
+    margin: 0px;
+    padding: 0px 5px;
   }
 }
+
 
 
 
@@ -499,11 +501,11 @@ nav ul li a{
 @media (max-width: 1130px) {
   .features {
     gap: 70px;
-    padding: 80px 20px;
+    padding: 80px 0px;
   }
 
   .feature-box {
-    width: 300px;
+    width: 330px;
     margin-bottom: 30px;
   }
 }
