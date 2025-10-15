@@ -167,9 +167,10 @@ nav ul li a{
   justify-content: center; 
   align-items: center;     
   display: none;
-  background-image: url('../images/1-1.png'); 
+  background-color: var(--black);
   background-size: cover;     
-  display: none;  
+  display: none; 
+  margin-bottom:50px ;
 }
 
 .big-text-section h1 {
@@ -182,7 +183,7 @@ nav ul li a{
 
 .full-section {
   width: 100vw;      
-  height: 60vh;      
+  height: 55vh;      
   background-color:white; 
   display: flex;
   justify-content: center;   
