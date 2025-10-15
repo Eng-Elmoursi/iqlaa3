@@ -1,0 +1,431 @@
+@media (max-width: 1004px) {
+  nav {
+      display: none;
+  }
+  nav.active {
+      display: flex;
+  }
+  .hamburger {
+      display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* إخفاء زرار تواصل معنا */
+  .contact-us {
+    display: none;
+  }
+
+  /* ضبط توزيع العناصر داخل الهيدر */
+  header {
+    justify-content: space-between;
+  }
+
+  /* اللوجو أقصى اليمين */
+  .logo {
+    position: absolute;
+    right: 1px;           /* هنا المفتاح عشان يكون على اليمين */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* أيقونة الهامبرجر أقصى اليسار */
+  .hamburger {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+  }
+
+  /* إخفاء القائمة العادية */
+  nav {
+    display: none;
+  }
+}
+
+/* ===============================
+   Responsive (Tablet)
+=================================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .first-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    min-height: 80vh; /* قللنا الارتفاع من 90vh لـ 70vh */
+    background-position: center;
+  }
+
+  .left{
+    padding-top: 20px; /* قللنا المسافة فوق */
+  }
+
+  .left img {
+    max-width: 80%;
+    margin-right: 20px;
+  }
+
+  .right {
+    max-width: 450px;
+    margin-right: 30px;
+  }
+
+  .first-section .right h1 {
+    font-size: 40px;
+  }
+
+  .right p {
+    font-size: 16px;
+  }
+
+  .services {
+    font-size: 15px;
+    padding: 10px 2px;
+  }
+}
+
+/* ===============================
+   Responsive (Mobile)
+=================================*/
+@media (max-width: 975px) {
+  .first-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; /* قللنا من 100vh لـ 80vh */
+    padding-bottom: 20px; /* قللنا البادينج */
+  }
+
+  .first-section .right h1 {
+    font-size: 35px;
+  }
+
+  .left {
+    margin-top: 20px;
+  }
+
+  .left img {
+    max-width: 80%;
+    margin-left: 0px;
+    margin-top: 70px;
+  }
+
+  .right {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: normal;
+    margin: 0px;
+    padding: 0px 5px;
+  }
+}
+
+/* ===============================
+   Responsive
+=================================*/
+@media (max-width: 1130px) {
+  .features {
+    gap: 70px;
+    padding: 80px 0px;
+  }
+
+  .feature-box {
+    width: 330px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 976px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .about-section{
+    padding: 40px 0px;
+  }
+
+  .image-content {
+    order: 1;
+    opacity: 0; 
+    transform: translateX(100px); 
+    transition: all 1s ease-in-out;
+  }
+
+  .image-content.show {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+
+  
+  .text-content {
+    order: 2;
+    text-align: center;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: all 1s ease-in-out;
+  }
+
+  .text-content.show {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+
+  .text-content h2 {
+    font-size: 26px;
+  }
+
+  .image-content img {
+    height: auto;
+    width: 90%;
+  }
+}
+
+/* ======== Responsive < 976px ======== */
+/* للأجهزة التابلت فقط */
+@media (min-width: 768px) and (max-width: 977px) {
+  .section-4-desc{
+    padding: 0px 40px;
+  }
+  .section-4-tab-item.active{
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 976px) {
+  .container-4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .section-4{
+    padding: 25px 10px;
+  }
+
+  .section-4-left {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    transform: translateX(-100px);
+  }
+
+  .section-4-right {
+    max-width: 100%;
+    text-align: center;
+    direction: rtl;
+    transform: translateX(100px);
+  }
+
+  .section-4-buttons {
+    justify-content: center;
+  }
+
+  .section-4-title{
+    font-size: 27px;
+  }
+
+  .section-4-tab-content {
+    position: relative;
+    min-height: 80px;
+    text-align: center;
+  }
+
+  .section-4-tab-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+    font-size: 12px;
+  }
+
+  .section-4-img {
+    width: 90%;
+    max-width: 550px;
+    margin-left: 0;
+    margin-right: 0;
+  } 
+}
+
+/* ======== Responsive < 476px ======== */
+@media (max-width: 476px) {
+  .section-4-tab-btn {
+    padding: 7px 14px;
+  }
+}
+
+/* ======== Responsive < 390px ======== */
+@media (max-width: 390px) {
+  .section-4-tab-btn {
+    padding: 2px 10px;
+  }
+}
+
+/* ===============================
+   Responsive Design
+=================================*/
+
+/* الشاشات أقل من 1200px */
+@media (max-width: 1200px) {
+  .fifth-section {
+    width: 95%;
+    margin: 80px auto;
+  }
+
+  .cards-container {
+    height: 400px;
+  }
+
+  .section-header .title {
+    font-size: 32px;
+  }
+}
+
+/* الشاشات أقل من 992px (تابلت) */
+@media (max-width: 992px) and (min-width: 768px) {
+  .fifth-section {
+    width: 95%;
+    margin: 80px auto;
+  }
+
+  .section-header .title {
+    font-size: 30px;
+  }
+
+  .section-header .subtitle {
+    font-size: 16px;
+  }
+
+  .view-all-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+
+  .cards-container {
+    height: 350px;
+    gap: 10px;
+  }
+
+  .card {
+    margin: 0 4px;
+    height: 100%;
+  }
+
+  .card-header {
+    font-size: 14px;
+  }
+
+  .card-content {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* Section Header */
+  .section-header .title {
+    font-size: 28px;
+  }
+
+  .section-header .subtitle {
+    font-size: 16px;
+  }
+
+  .view-all-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  /* Cards Container */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  /* Individual Card */
+  .card,
+  .card.active {      /* إزالة تأثير الكلاس active */
+    flex: none !important;
+    width: 100%;
+    height: 500px;    /* ارتفاع ثابت لكل الكروت */
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* Overlay لكل الكروت */
+  .card::after,
+  .card.active::after {
+    background: rgba(0, 0, 0, 0.3); /* نفس اللون لكل الكروت */
+  }
+
+  /* Header داخل الكارد */
+  .card-header {
+    display: none !important; /* نخفي الهيدر تمامًا */
+  }
+
+  /* Content داخل الكارد */
+  .card-content {
+    display: block !important; /* كل المحتوى ظاهر */
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px){
+  /* Section Header */
+  .section6-title h2{
+    font-size: 28px;
+  }
+
+  .section6-title h3{
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 976px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column{
+    padding: 0px 20px;
+  }
+
+  .footer-overlay {
+    padding: 0px 0 30px;
+  }
+
+  .footer-social-icons a,
+  .footer-column p i {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .footer-heading {
+    font-size: 18px;
+  }
+
+  .footer-column:first-child .footer-logo {
+    position: relative;
+    top: 0;
+    right: -30;
+  }
+
+  .footer-column:first-child .footer-description {
+    margin-top: 0;
+  }
+}
