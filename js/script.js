@@ -277,7 +277,7 @@ function services() {
 
 function aboutus() {
   toggleSectionsAndChangeH1(
-    ['first-section','fifth-section','section6-features'],
+    ['first-section','features','fifth-section','section6-features'],
     'big-text-section',
     'من نحن'
   );
